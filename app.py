@@ -22,9 +22,6 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 app.secret_key = 'avi'  #app.config['JWT_SECRET_KEY']
 api = Api(app)
 
-@app.before_first_request
-def create_table():
-    db.create_all()
 
 jwt = JWTManager(app)
 
